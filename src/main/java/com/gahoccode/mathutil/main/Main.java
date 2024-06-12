@@ -14,10 +14,10 @@ import javax.swing.JOptionPane;
 public class Main {
 
     // This method is written in local
-    public static void sayHiFromLocal() 
-       {
+    public static void sayHiFromLocal() {
         System.out.println("Hello");
     }
+
     //this method is written in directly in server to simulate
     //the word of another term member, he uploads code before me
     public static void SayHiFromServer() {

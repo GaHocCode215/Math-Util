@@ -9,6 +9,7 @@ package com.gahoccode.mathutil.core;
  * @author ASUS
  */
 public class MathUtility {
+
     // Ta sẽ viết những ham toán học cung cấp cho bên ngoài sử dụng
     // giống như thư viện Math. của JDK
     // Các hàm mang ý nghĩa tiện ích dùng chung cho nhiều nơi
@@ -17,19 +18,31 @@ public class MathUtility {
     // Hàm tính n! = 1.2.3.4..n
     // n: 0..20; do 21! tràn kiểu long, ko có âm giai thừa
     // 0! = 1;
-    public static long getFactorial(int n){
-        long product = 1;
+    public static long getFactorial(int n) {
+
+        
         // Sửa lại từ 10 thành 1 để có màu xanh
-        if(n < 0 || n > 20){
+        if (n < 0 || n > 20) {
             throw new IllegalArgumentException("Invalid n. n must be between 0..20");
         }
-        if(n == 0){
+        if (n == 0 || n == 1) {
             return 1;
         }
-        for (int i = 1; i <= n; i++) {
-            product *= i;
-        }
-        return product;
-        
+        return n * getFactorial(n - 1);
+        //n! = n * (n-1) //stack LIFO - last in first out
+        //USING RECURSION TO DEMONSTRATE REGRESSION TEST
     }
+
+//HỌC VỀ REGRESSION TEST - KIỂM THỬ HỒI QUY
+//KIỂM THỬ LẠI NHỮNG THỨ ĐÃ TỪNG KIỂM THỬ. TẠI SAO PHẢI LÀM ĐIỀU NÀY
+//LÝ DO: CODE ĐANG ỔN, MÀ KO ĐỤNG VÀO NÓ, THÌ NÓ VẪN ỔN
+//NHƯNG NẾU CÓ FIX BUG, CÓ SỬA HÀM, CÓ TỐI ƯU THUẬT TOÁN TRONG HÀM, THÌ HÀM CẦN PHẢI ĐƯỢC TEST LẠI - TEST LẠI THỨ ĐÃ TỪNG TEST, TEST LẠI HÀM ĐÃ TỪNG TEST
+//ĐỂ XÁC NHẬN RẰNG NÓ CÒN NGON - CÒN XANH HAY KO SAU KHI CODE ĐC SỬA
+//NẾU CÓ UNIT TEST CPDE (JUNIT) VIỆC TEST LẠI CODE CỰC NHANH
+//CHỈ CẦN THẤY MÀU XANH CỦA CÁC JUNIT TEST CASE ĐC RUN LÀ ĐỦ
+//NHANH NỮA: ĐƯA UNIT TEST LÊN GITHUB, CÀI CI SCRIPT (FILE YAML YML ) VÀO
+//MỌI THỨ TỰ ĐỘNG BÁO XANH ĐỎ LUÔN
+//KIỂM THỬ LẠI NHỮNG THỨ ĐÃ KIỂM THỬ GỌI LÀ TEST HỒI QUY - REGRESSION
+//NÊN DÙNG TỰ ĐỘNG BẰNG CÁCH XÀI UNIT TEST FRAMEWORK
+//NHÌN = MẮT TỪ HÀM MAIN() CÁCH TRUYỀN THỐNG LÀ KO NÊN
 }
