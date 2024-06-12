@@ -13,6 +13,12 @@ import javax.swing.JOptionPane;
  */
 public class Main {
 
+    //this method is written in directly in server to simulate
+    //the word of another term member, he uploads code before me
+    public static void SayHiFromServer(){
+    
+    }
+    
     public static void main(String[] args) {
         // CÁCH KIỂM THỨ 2
         // Test case #1: Check if 0! returns 1
