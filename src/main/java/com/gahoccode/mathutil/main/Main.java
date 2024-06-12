@@ -12,12 +12,18 @@ import javax.swing.JOptionPane;
  * @author ASUS
  */
 public class Main {
-    
+
     // This method is written in local
-    public static void sayHiFromLocal() => {
-        
+    public static void sayHiFromLocal() 
+       {
+        System.out.println("Hello");
     }
-    
+    //this method is written in directly in server to simulate
+    //the word of another term member, he uploads code before me
+    public static void SayHiFromServer() {
+        System.out.println("Hello Local");
+    }
+
     public static void main(String[] args) {
         // CÁCH KIỂM THỨ 2
         // Test case #1: Check if 0! returns 1

@@ -6,7 +6,8 @@
 
 * A Java Project (using Maven) to demonstrate a Math library as in JDK
 * A Unit Test test script using JUnit Test framework, and TDD, DDT technique
-* A CI script to demonstrate the Continous Integration using GitHub Actions
+* A CI script to demonstrate the Continous Integration using GitHub Actions vamemW
+* A demonstration oon what is the regression Test (Kiểm thử hồi quy)
 * and more...
 
 # Screenshots
